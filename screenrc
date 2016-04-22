@@ -1,0 +1,28 @@
+# Statusbar
+hardstatus off
+hardstatus alwayslastline
+hardstatus string "%{+b wk} %-w%{+b wB} %n %t %{-}%+w %41=%H @ %l %-= %= %D, %c:%s "
+
+# Escape key
+escape ^Jj
+
+# To clear the screen after closing some programs
+altscreen on
+
+# Windows opening by default
+bind c screen 1
+bind 0 select 10
+screen -t "bash" 1
+screen -t "bash" 2
+screen -t "bash" 3
+screen -t "bash" 4
+
+# keybinds
+bindkey -k k; quit
+
+# COLORS! and some usefull terminfo
+term screen-256color
+terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+# Do not show startup message
+startup_message off
