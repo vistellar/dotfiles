@@ -1,0 +1,6 @@
+[user]
+	name = weixing-org
+	email = weixing-org@gmail.com
+[core]
+	autocrlf = input
+	editor = emacsclient -t
