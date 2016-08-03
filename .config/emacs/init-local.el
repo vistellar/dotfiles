@@ -27,9 +27,11 @@
 (linum-mode t)
 (global-hl-line-mode t)
 
+(global-flycheck-mode -1)
+
 (setq-default cursor-type 'bar)
 (setq make-backup-files nil)
-(set-frame-font "DejaVu Sans Mono-16" nil t)
+(set-frame-font "DejaVu Sans Mono-14" nil t)
 
 (provide 'init-local)
 ;;; init-local.el ends here
