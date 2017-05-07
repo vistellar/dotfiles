@@ -1,23 +1,13 @@
 ** 安装Arch Linux
 
-*** 准备分区
-
-
-
 ```sh
-
+pacstrap -d -i ${} base xorg-server xorg-server-utils xorg-init emacs chromium openbox wpa_supplient 
 ```
 
-*** 准备系统
+*** netctl
 
-  - 从.config目录拷贝pacman.conf、mkinitcpio.conf到镜像的/etc目录下
-  -
-
-```sh
-pacstrap -d -i ${} base base-devel xorg-server xorg-server-utils xorg-init emacs chromium
 ```
-
-*** 安装Syslinux
-
-```sh
+netctl list
+netctl enable wls1p0-xxxxxx
+netctl start  wls1p0-xxxxxx
 ```

@@ -1,6 +1,7 @@
 [user]
-	name = weixing-org
-	email = weixing-org@gmail.com
+	name = weixing
+	email = wei_xing@topsec.com.cn
 [core]
 	autocrlf = input
 	editor = emacsclient -t
+	quotepath = false
