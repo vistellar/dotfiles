@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-source ~/.zshrc
 export GTK2_RC_FILES="$HOME/.config/gtk-2.0/settings.ini"
 export QT_IM_MODULE=ibus
 export GTK_IM_MODULE=ibus
@@ -16,5 +15,5 @@ if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
     eval "$(dbus-launch --sh-syntax --exit-with-session)"
 fi
 
-exec awesome
+exec openbox
 

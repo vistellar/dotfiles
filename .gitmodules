@@ -1,9 +1,0 @@
-[submodule ".emacs.d"]
-	path = .emacs.d
-	url = https://github.com/purcell/emacs.d.git
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule ".config/awesome"]
-	path = .config/awesome
-	url = https://github.com/copycat-killer/awesome-copycats.git
