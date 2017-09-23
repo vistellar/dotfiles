@@ -5,4 +5,3 @@ if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
 fi
 xset -b
 exec openbox-session
-
