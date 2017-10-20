@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+if [[ -z "$DBUS_SESSION_BUS_ADDRESS" ]]; then
     eval "$(dbus-launch --sh-syntax --exit-with-session)"
 fi
-xset -b
+
 exec openbox-session

@@ -30,7 +30,8 @@ values."
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(sql
+     markdown
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -42,7 +43,7 @@ values."
      better-defaults
      emacs-lisp
      git
-     ;; markdown
+     markdown
      (org :variables org-projectile-file "TODOs.org")
      (shell :variables
             shell-default-height 30
@@ -123,7 +124,7 @@ values."
    ;; True if the home buffer should respond to resize events.
    dotspacemacs-startup-buffer-responsive t
    ;; Default major mode of the scratch buffer (default `text-mode')
-   dotspacemacs-scratch-mode 'text-mode
+   dotspacemacs-scratch-mode 'elisp-mode
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
@@ -306,6 +307,11 @@ before packages are loaded. If you are unsure, you should try in setting them in
         '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
           ("org-cn"   . "http://elpa.emacs-china.org/org/")
           ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
+  (with-eval-after-load 'org
+    (dolist (charset '(kana han symbol cjk-misc bopomofo))
+      (set-fontset-font (frame-parameter nil 'font)
+                        charset (font-spec :family "WenQuanYi Micro Hei Mono" :size 16)))
+    )
   )
 
 (defun dotspacemacs/user-config ()
@@ -315,9 +321,6 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (dolist (charset '(kana han symbol cjk-misc bopomofo))
-    (set-fontset-font (frame-parameter nil 'font)
-                      charset (font-spec :family "WenQuanYi Micro Hei Mono" :size 14)))
   (with-eval-after-load 'org-agenda
     (require 'org-projectile)
     (mapcar '(lambda (file)

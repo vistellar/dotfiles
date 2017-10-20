@@ -1,0 +1,6 @@
+[Unit]
+Description=Update Background
+ 
+[Service]
+Type=simple
+ExecStart=/home/weixing/.config/systemd/user/update-background.sh

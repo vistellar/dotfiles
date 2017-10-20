@@ -1,0 +1,9 @@
+[Unit]
+Description=Update background every 1 hour
+ 
+[Timer]
+OnUnitActiveSec=1h
+Unit=update-background.service
+ 
+[Install]
+WantedBy=multi-user.target
